@@ -1,0 +1,313 @@
+body {
+	font-family: "微软雅黑", Tahoma, Helvetica, Arial, sans-serif;
+}
+
+.nav_wrap a {
+	color: #fff!important;
+}
+
+.container {
+	max-width: 1200px;
+}
+
+.form-inline {
+	border: 1px solid #fff;
+}
+
+.form-control,
+.btn {
+	border: 0;
+	background: transparent;
+}
+
+.collapse>.navbar-nav {
+	position: relative;
+}
+
+.navbar-nav .nav-link {
+	margin-right: 25px!important;
+	padding: 0!important;
+	padding-bottom: 12px!important;
+	position: relative;
+	top: 100px;
+	opacity: 0;
+}
+
+form.form-inline,
+.lisnj>a,
+.logo {
+	position: relative;
+	top: 100px;
+	opacity: 0;
+}
+
+@keyframes name {
+	from {
+		top: 100px; opacity: 0;
+	}
+	to {
+		top: 0px;opacity: 1;
+	}
+}
+
+.navbar-nav .nav-link b {
+	display: block;
+	width: 0;
+	position: absolute;
+	opacity: 0;
+	height: 2px;
+	background: white;
+	bottom: 0px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+/*.navbar-nav .nav-item .shouye b {
+	opacity: 1;
+	width: 100%;
+	background: white;
+}*/
+
+.navbar-nav .nav-link:hover b {
+	width: 100%;
+	opacity: 1;
+	transition: 0.5s ease-in-out;
+}
+
+input.form-control {
+	margin: 0;
+	padding: 0;
+	max-width: 200px!important;
+	max-height: 32px;
+}
+
+.btn {
+	background: url(../img/serch.png);
+	font-size: 25px;
+	padding: 0;
+	margin: 0;
+	/*margin: 3px 5px 0 0;*/
+	max-height: 32px;
+}
+
+.btn:hover {
+	background: transparent;
+}
+
+.lisnj a {
+	display: inline-block;
+	width: 31px;
+	height: 31px;
+	margin-left: 0px;
+	vertical-align: middle;
+	border-radius: 50%;
+}
+
+.lisnj a:nth-child(1) {
+	background: url(../img/h2.png) no-repeat center center #fff;
+}
+
+.lisnj a:nth-child(2) {
+	background: url(../img/h1.png) no-repeat center center #fff;
+}
+
+.lisnj a:nth-child(3) {
+	background: url(../img/shangcheng1.png) no-repeat center center #fff;
+}
+
+.lisnj a:nth-child(4) {
+	background: url(../img/h3.png) no-repeat center center #fff;
+	position: relative;
+}
+.lisnj a:nth-child(4) img{
+	position: absolute;
+    top: 36px;
+    width: 80px;
+    left: -50px;
+    display: none;
+}
+.lisnj a:nth-child(4):hover img{
+	display: block;
+}
+.lisnj a:nth-child(1):hover {
+	background: url(../img/cc1.png) no-repeat center center #fff;
+}
+
+.lisnj a:nth-child(2):hover {
+	background: url(../img/dd1.png) no-repeat center center #fff;
+}
+
+.lisnj a:nth-child(4):hover {
+	background: url(../img/ff2.png) no-repeat center center #fff;
+}
+
+.lisnj a:nth-child(3):hover {
+	background: url(../img/shagncheng.png) no-repeat center center #fff;
+	background-size: 20px;
+}
+
+.lisnj {
+	margin-left: 25px;
+}
+
+.bav_list {
+	font-size: 0;
+	background: white;
+	position: absolute;
+	top: 39px;
+	left: 0px;
+}
+
+.bav_list {
+	width: 680px;
+	line-height: 35px;
+	transform: translateY(50px);
+	opacity: 0;
+	z-index: -1;
+	height: 0;
+	overflow: hidden;
+	transition: 0.4s ease-in;
+}
+
+.navbar-nav>li:hover .bav_list {
+	transform: translateY(0);
+	opacity: 1;
+	z-index: 1;
+	height: 245px;
+}
+
+.bav_list ol {
+	display: inline-block;
+	vertical-align: middle;
+	width: 30%;
+	padding: 30px;
+	box-sizing: border-box;
+	background: #f8f8f8;
+	height: auto;
+	position: relative;
+	z-index: 2;
+}
+
+.bav_list ol li {
+	border-bottom: 1px solid #f1f1f1;
+	position: relative;
+}
+
+.bav_list ol li:last-child {
+	border: none;
+}
+
+.bav_list ol li a {
+	font-size: 14px!important;
+	color: gray!important;
+}
+
+.bav_list ol li:hover a {
+	color: #000!important;
+	text-decoration: none;
+}
+
+.bav_list ol li i {
+	display: inline-block;
+	position: absolute;
+	font-size: 13px;
+	left: 9px;
+	color: transparent;
+	transition: 0.3s ease-in-out;
+}
+
+.bav_list ol li:hover i {
+	color: gray;
+}
+
+.bav_list:after {
+	content: '';
+	display: block;
+	width: 30%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #f8f8f8;
+}
+
+.bav_list dl {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 20px 0;
+	text-align: center;
+	width: 70%;
+}
+
+.bav_list dl span {
+	display: block;
+}
+
+.bav_list dl span img {
+	max-width: 55%;
+}
+
+.bav_list dl dd {
+	display: none;
+	width: 476px;
+	height: 192px;
+}
+
+.bav_list dl dd p {
+	font-size: 14px;
+	color: #666666;
+}
+
+.bav_list dl dd p font {
+	font-size: 12px;
+	color: gray;
+}
+
+.logo {
+	animation: name 0.2s linear .1s forwards;
+}
+
+.collapse>ul>li:nth-child(1)>a {
+	animation: name 0.8s linear .3s forwards;
+}
+
+.collapse>ul>li:nth-child(2)>a {
+	animation: name 0.8s linear .4s forwards;
+}
+
+.collapse>ul>li:nth-child(3)>a {
+	animation: name 0.8s linear .5s forwards;
+}
+
+.collapse>ul>li:nth-child(4)>a {
+	animation: name 0.8s linear .6s forwards;
+}
+
+.collapse>ul>li:nth-child(5)>a {
+	animation: name 0.8s linear .7s forwards;
+}
+
+.collapse>ul>li:nth-child(6)>a {
+	animation: name 0.8s linear .8s forwards;
+}
+
+.collapse>ul>li:nth-child(7)>a {
+	animation: name 0.8s linear .9s forwards;
+}
+
+.collapse>ul>li:nth-child(8)>a {
+	animation: name 0.8s linear 1s forwards;
+}
+
+form.form-inline {
+	animation: name 0.8s linear 1.1s forwards;
+}
+
+.lisnj>a {
+	animation: name 0.8s linear 1.2s forwards;
+}
+
+.logo {
+	animation: name 0.8s linear 1.3s forwards;
+}

@@ -1,0 +1,408 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none!important;
+}
+#cebianlan {
+	width: 50px;
+	position: fixed;
+	right: 0;
+	bottom: 20%;
+	z-index: 999;
+}
+ul li {
+	list-style: none;
+}
+
+@keyframes img {
+	33% {
+		transform: scale(1);
+	}
+	66% {
+		transform: scale(1.02);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@media only screen and (min-width:1200px) {
+	.atsl_list h1 {
+		transition: 0.6s ease-out;
+	}
+	.atsl_list p {
+		transition: 0.6s ease-out .2s;
+	}
+	.atsl_list font {
+		transition: 0.6s ease-out .3s;
+	}
+	.atsl_list h1:after {
+		transition: 0.6s ease-out .1s;
+	}
+	.article:hover .atsl_list h1:after {
+		background: white;
+	}
+	.article:hover .atsl_list h1,
+	.article:hover .atsl_list p,
+	.article:hover .atsl_list font {
+		transform: translateY(-300px);
+		color: white;
+	}
+}
+
+
+/*天坛品牌头部大图*/
+
+.tiantan {
+	width: 85%;
+	margin: 0 auto;
+}
+
+.circle-load-rect-svg {
+	margin: 5px;
+}
+
+.g-rect-path {
+	fill: none;
+	stroke-width: 3;
+	stroke: rgba(250, 250, 250, .2);
+	stroke-linejoin: round;
+	stroke-linecap: round;
+}
+
+.g-rect-fill {
+	fill: none;
+	stroke-width: 3;
+	stroke: rgba(250, 250, 250, .7);
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	stroke-dasharray: 0, 1370;
+	stroke-dashoffset: 0;
+	transition: 2s linear;
+}
+
+.ej_banner {
+	position: relative;
+	overflow: hidden;
+}
+
+.ej_banner span {
+	display: block;
+}
+
+.ej_banner span img {
+	width: 100%;
+	min-height: 400px;
+	animation: img 6s infinite;
+}
+
+.ej_banner_list {
+	position: absolute;
+	width: 100%;
+	top: 60%;
+	transform: translateY(-50%);
+}
+
+.ej_banner_list_div {
+	position: relative;
+}
+
+.ej_banner_list_div_aside {
+	position: absolute;
+	top: 0;
+	z-index: 2;
+	box-sizing: border-box;
+	padding: 50px 40px;
+}
+
+.ej_banner_list_div_aside h1 {
+	font-size: 30px;
+	color: white;
+	font-weight: normal;
+}
+
+.ej_banner_list_div_aside h1:before {
+	content: '';
+	display: block;
+	width: 35px;
+	height: 1px;
+	background: white;
+	margin-bottom: 10px;
+}
+
+.ej_banner_list_div_aside span {
+	display: block;
+	color: white;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-top: 5px;
+}
+
+
+/*<!--民用家具导航栏-->*/
+
+.divBox {
+	width: 87%;
+	margin: 0 auto;
+}
+
+.ej_nav_ul li {
+	display: inline-block;
+	vertical-align: top;
+	width: 20%;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.ej_nav_ul ul {
+	font-size: 0;
+}
+
+.ej_nav_ul ul li a {
+	line-height: 90px;
+	font-size: 18px;
+	display: block;
+	color: #666;
+}
+
+.ej_nav_ul ul li a:hover {
+	background: #ac9072;
+	color: white;
+}
+
+
+/*民用家具*/
+
+.article img {
+	width: 100%;
+}
+
+.wrapper {
+	width: 78%;
+	margin: 0 auto;
+}
+
+.wall {
+	display: block;
+	position: relative;
+}
+
+.wrapper ul li {
+	display: block;
+	position: relative;
+	width: 49%;
+	float: left;
+	padding: 2.5%;
+	box-sizing: border-box;
+}
+
+.article {
+	display: block;
+	transition: all 100;
+	overflow: hidden;
+	position: relative;
+}
+
+.article img {
+	display: block;
+	width: 100%;
+}
+
+.top-header img {
+	width: 100%;
+	display: block;
+}
+
+.wall:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.article span {
+	display: block;
+	overflow: hidden;
+	position: relative;
+}
+
+.article span:after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 300px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, .5);
+	opacity: 0;
+	border-radius: 50%;
+	transition: 0.5s ease-out;
+}
+
+.article:hover span:after {
+	opacity: 1;
+	border-radius: 0;
+}
+
+.article span img {
+	transition: 0.3s ease-in-out;
+}
+
+.article:hover span img {
+	transform: scale(1.05);
+}
+
+.atsl_list {
+	box-sizing: border-box;
+	padding: 50px 15% 65px;
+	text-align: center;
+}
+
+.atsl_list h1 {
+	font-size: 22px;
+	font-weight: bold;
+	color: #333333;
+}
+
+.atsl_list h1:after {
+	content: '';
+	display: block;
+	margin: 10px auto 0;
+	width: 35px;
+	height: 1px;
+	background: #333;
+}
+
+.atsl_list p {
+	font-size: 14px;
+	color: gray;
+	line-height: 20px;
+	margin-top: 15px;
+}
+
+.atsl_list font {
+	display: inline-block;
+	padding: 8px 30px;
+	color: white;
+	background: #7f7f7f;
+	font-size: 15px;
+	position: relative;
+	z-index: 2;
+	margin-top: 40px;
+}
+
+.atsl_list font:after {
+	content: '';
+	display: block;
+	width: 0%;
+	height: 100%;
+	background: #b3916c;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	transition: 0.2s ease-in;
+}
+
+.article:hover .atsl_list font:after {
+	width: 100%;
+}
+
+.title2 h2 {
+	text-transform: uppercase;
+	font-size: 28px;
+	color: #000;
+	letter-spacing: 2px;
+	font-weight: 100;
+	/*transform: translateY(150px);
+	opacity: 0;*/
+	/*transition: 1s ease-in-out;*/
+}
+
+.title2 h3 {
+	color: #b3916c;
+	font-size: 20px;
+	margin-top: 5px;
+	/*transform: translateY(150px);
+	opacity: 0;
+	transition: 1s ease-in-out 0.5s;*/
+}
+
+.title2 h3:before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+	width: 25px;
+	height: 1px;
+	background: #444;
+}
+
+.my_con1_list_list p {
+	font-size: 16px;
+	line-height: 25px;
+	color: #888;
+	margin: 40px 0 50px;
+}
+
+.my_con1_list_list {
+	box-sizing: border-box;
+	padding-right: 15%;
+}
+
+
+/*瀑布流*/
+
+* {
+	margin: 0;
+	padding: 0
+}
+
+.btn1 {
+	display: block;
+	margin: 0 auto;
+	border: 0;
+	color: #fff;
+	background-color: #7F7F7F;
+	padding: 10px 15px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.btn1:hover{
+	background: #b3916c;
+}
+
+
+div.section {
+	overflow: hidden;
+	width: 900px;
+	margin: 0 auto;
+}
+
+div.aside {
+	width: 225px;
+	float: left;
+	display: inline
+}
+
+div.aside div.content {
+	margin: 5px;
+	background: #b3916c;
+	box-shadow: 5px 6px 6px #666;
+	transition: 0.3s linear;
+}
+div.aside div.content img {
+	width: 205px;
+	margin: 5px;
+}
+div.aside div.content:hover{
+	transform: translateY(-5px);
+}
+div.aside div.content div.imgcaption {
+	margin: 0 5px;
+	line-height: 20px
+}

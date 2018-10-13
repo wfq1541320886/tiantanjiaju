@@ -1,0 +1,512 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "微软雅黑", Tahoma, Helvetica, Arial, sans-serif;
+}
+
+a {
+	text-decoration: none!important;
+}
+#cebianlan {
+	width: 50px;
+	position: fixed;
+	right: 0;
+	bottom: 20%;
+	z-index: 9999;
+}
+ul li {
+	list-style: none;
+}
+
+@keyframes img {
+	33% {
+		transform: scale(1);
+	}
+	66% {
+		transform: scale(1.02);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes rns {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+
+/*商用家具头部大图*/
+
+.tiantan {
+	width: 85%;
+	margin: 0 auto;
+}
+
+.circle-load-rect-svg {
+	margin: 5px;
+}
+
+.g-rect-path {
+	fill: none;
+	stroke-width: 3;
+	stroke: rgba(250, 250, 250, .2);
+	stroke-linejoin: round;
+	stroke-linecap: round;
+}
+
+.g-rect-fill {
+	fill: none;
+	stroke-width: 3;
+	stroke: rgba(250, 250, 250, .7);
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	stroke-dasharray: 0, 1370;
+	stroke-dashoffset: 0;
+	transition: 2s linear;
+}
+
+.ej_banner {
+	position: relative;
+	overflow: hidden;
+}
+
+.ej_banner span {
+	display: block;
+}
+
+.ej_banner span img {
+	width: 100%;
+	min-height: 400px;
+	animation: img 6s infinite;
+}
+
+.ej_banner_list {
+	position: absolute;
+	width: 100%;
+	top: 60%;
+	transform: translateY(-50%);
+}
+
+.ej_banner_list_div {
+	position: relative;
+}
+
+.ej_banner_list_div_aside {
+	position: absolute;
+	top: 0;
+	z-index: 2;
+	box-sizing: border-box;
+	padding: 50px 40px;
+}
+
+.ej_banner_list_div_aside h1 {
+	font-size: 30px;
+	color: white;
+	font-weight: normal;
+}
+
+.ej_banner_list_div_aside h1:before {
+	content: '';
+	display: block;
+	width: 35px;
+	height: 1px;
+	background: white;
+	margin-bottom: 10px;
+}
+
+.ej_banner_list_div_aside span {
+	display: block;
+	color: white;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-top: 5px;
+}
+
+
+/*<!--商用家具导航-->*/
+
+.divBox {
+	width: 85%;
+	margin: 0 auto;
+}
+
+.my_nav {
+	background: url(../img/img4/jsdfa_02.jpg) no-repeat;
+	background-size: cover;
+}
+
+.my_nav ul li {
+	display: inline-block;
+	vertical-align: top;
+	width: 16%;
+	text-align: center;
+	line-height: 90px;
+}
+
+.my_nav ul li a {
+	font-size: 18px;
+	color: #666;
+	display: block;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.my_nav ul li a:after {
+	transform: scaleX(1);
+}
+
+.my_nav ul li a:after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	transform: scaleX(0);
+	background: #b3916c;
+	bottom: 0px;
+	transition: 0.3s ease-in-out;
+}
+
+.my_nav ul li:hover a:after,
+.my_nav ul li.on a:after {
+	transform: scaleX(1);
+}
+
+
+/*商用家具*/
+
+.shouye1 {
+	font-size: 14px;
+	color: #666666;
+	padding: 35px 0 25px;
+}
+
+.shouye1 a {
+	vertical-align: top;
+	font-size: 14px;
+	color: #666666;
+	margin-left: 10px;
+}
+
+
+/*商用家具下面的图片*/
+
+.commercial .swiper-container {
+	width: 532px;
+	overflow: hidden;
+}
+
+.commercial .swiper-container img {
+	height: auto;
+	max-width: 100%;
+	transition: all 1s;
+}
+
+.commercial .swiper-container img:hover {
+	transform: scale(1.1);
+}
+
+.ani {
+	position: absolute;
+	bottom: 69px;
+	left: 147px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+	min-width: 240px;
+	padding: 12px 0;
+	border-bottom: 1px solid #fff;
+	border-top: 1px solid #fff;
+	text-align: center;
+}
+
+
+/*商用家具右面的图片*/
+
+.commercial_right {
+	width: 100%;
+	font-size: 0;
+}
+
+.commercial_right li {
+	display: inline-block;
+	margin-bottom: 22px;
+	vertical-align: top;
+	margin-right: 4%;
+	width: 48%;
+	overflow: hidden;
+	position: relative;
+}
+
+.commercial_right li img {
+	transition: 0.3s ease-out;
+}
+
+.commercial_right li:hover img {
+	transform: scale(1.2);
+}
+
+.commercial_right li:nth-child(2n) {
+	margin-right: 0;
+}
+
+.commercial_right li img {
+	width: 100%;
+}
+
+.commercial_right li p,
+.home_below a p {
+	position: absolute;
+	bottom: 50px;
+	width: 100%;
+	text-align: center;
+	font-size: 14px;
+	z-index: 2;
+	opacity: 0;
+	transition: 0.4s ease-in-out;
+}
+
+.commercial_right li p span,
+.home_below a p span {
+	display: inline-block;
+	width: 205px;
+	line-height: 40px;
+	background: white;
+	color: #393939;
+}
+
+.commercial_right li p:before,
+.home_below a p:before {
+	content: '';
+	width: 0;
+	border: 5px solid transparent;
+	border-bottom-color: white;
+	display: block;
+	margin: 0 auto;
+}
+
+.commercial_right li b,
+.home_below a b {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0);
+	top: 0;
+	left: 0;
+	transition: 0.3s ease-in-out;
+}
+
+.commercial_right li i {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	border: 1px solid rgba(250, 250, 250, .5);
+	transition: 0.3s ease-in-out;
+	z-index: 22;
+}
+
+.commercial_right li strong {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	transition: 0.3s ease-in-out;
+	z-index: 3;
+}
+
+.commercial_right .tiantan {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #787878;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	text-align: center;
+	transition: 0.3s ease-in-out;
+}
+
+.commercial_right li:hover i {
+	transform: scale(0.9);
+}
+
+.commercial_right li:hover strong {
+	background-color: #B3916C;
+}
+
+.commercial_right li:hover p {
+	bottom: 0;
+	opacity: 1;
+}
+
+.commercial_right li:hover b {
+	background: rgba(0, 0, 0, 0.4);
+}
+
+.commercial_right .tiantan .list {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 60px;
+	height: 100px;
+	margin: auto;
+	z-index: 999!important;
+}
+
+.commercial_right .tiantan .list h3 {
+	font-size: 14px;
+	color: #fff;
+	margin-top: 5px;
+}
+
+.commercial_right .tiantan .list li {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background: white;
+	border-radius: 5px;
+	margin: 2px;
+}
+
+.commercial_right .tiantan .list li:nth-child(2) {
+	animation: rns 10s linear infinite;
+}
+
+
+/*展开之后的图片*/
+
+.divBox_ul {
+	font-size: 0;
+}
+
+.divBox .divBox_ul li {
+	display: inline-block;
+	vertical-align: top;
+	background: white;
+	width: 22.5%;
+	margin-right: 2%;
+	cursor: pointer;
+	margin-bottom: 30px;
+}
+
+.divBox .divBox_ul li img {
+	width: 100%;
+	transition: 0.3s ease-in-out;
+}
+
+.divBox .divBox_ul li span {
+	display: block;
+	overflow: hidden;
+	position: relative;
+}
+
+.divBox .divBox_ul li span:before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: url(../img/img4/fangda_03.png) no-repeat center center rgba(0, 0, 0, .2);
+	position: absolute;
+	top: 0;
+	transform: scale(0);
+	transition: 0.3s ease-in-out;
+	z-index: 2;
+}
+
+.divBox .divBox_ul li p {
+	padding: 20px 0;
+	font-size: 14px;
+	color: #333;
+	text-align: center;
+	transition: 0.3s ease-in-out;
+}
+
+.divBox .divBox_ul li:hover img {
+	transform: scale(1.05);
+}
+
+.divBox .divBox_ul li:hover span:before {
+	transform: scale(1);
+}
+
+.divBox .divBox_ul li:hover p {
+	background: #b3916c;
+	color: white;
+}
+.divBox_wrap{
+	/*display: none;*/
+}
+
+/*固定轮播*/
+
+.swiper-container1 {
+	width: 460px;
+	height: 400px;
+	margin: 15px auto;
+	position: relative;
+	overflow: hidden;
+	z-index: 9999!important;
+}
+
+.banner {
+	width: 500px;
+	height: 460px;
+	margin: 12px auto;
+	position: relative;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+.swiper-container1 img {
+	width: 100%;
+}
+
+.swiper-container1 .swiper-button-next,
+.swiper-container1 .swiper-button-prev {
+	width: 25px;
+	height: 60px;
+	background-color: rgba(0, 0, 0, .5);
+	background-size: 10px;
+}
+
+.banner h1 {
+	font-size: 18px;
+	color: #333;
+	font-weight: bold;
+	text-align: left;
+}
+
+.banner_fix {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+}
+.out{
+	display: block;
+	margin: 90px auto 0;
+	width: 40px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	cursor: pointer;
+}

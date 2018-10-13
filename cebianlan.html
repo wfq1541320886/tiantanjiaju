@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			ul li {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			
+			.cbl {
+				width: 50px;
+				display: none;
+			}
+			
+			.cbl li {
+				margin-top: 0px;
+				transition: 0.4s ease-in-out;
+				height: 51px;
+			}
+			
+			.cbl span {
+				transition: 0.4s ease-in-out;
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				text-align: center;
+				background: #fff;
+				box-sizing: border-box;
+				font-size: 12px;
+				color: white;
+				line-height: 50px;
+				border: 1px solid #b3916c;
+			}
+			
+			.cbl span i {
+				display: block;
+				font-size: 40px;
+				color: white;
+			}
+			
+			.cbl li:nth-child(4) {
+				position: relative;
+			}
+			
+			.cbl li:nth-child(4) img {
+				position: absolute;
+				width: 80px;
+				top: 0;
+				left: -80px;
+				display: none;
+			}
+			
+			.cbl li:nth-child(4):hover img {
+				display: block;
+			}
+			
+			.cbl li:nth-child(1) span {
+				background: url(img/cc3.png) no-repeat center center #fff;
+			}
+			
+			.cbl li:nth-child(2) span {
+				background: url(img/dd3.png) no-repeat center center #fff;
+			}
+			
+			.cbl li:nth-child(3) span {
+				background: url(img/sc1.png) no-repeat center center #fff;
+			}
+			
+			.cbl li:nth-child(4) span {
+				background: url(img/ff3.png) no-repeat center center #fff;
+			}
+			
+			.cbl li:nth-child(5) span {
+				background: url(img/ee3.png) no-repeat center center #fff;
+			}
+			
+			.cbl li:nth-child(1):hover span {
+				background: url(img/cc4.png) no-repeat center center #b3916c;
+				border-radius: 50%;
+			}
+			
+			.cbl li:nth-child(2):hover span {
+				background: url(img/dd4.png) no-repeat center center #b3916c;
+				border-radius: 50%;
+			}
+			
+			.cbl li:nth-child(3):hover span {
+				background: url(img/sc2.png) no-repeat center center #b3916c;
+				border-radius: 50%;
+			}
+			
+			.cbl li:nth-child(4):hover span {
+				background: url(img/ff4.png) no-repeat center center #b3916c;
+				border-radius: 50%;
+			}
+			
+			.cbl li:nth-child(5):hover span {
+				background: url(img/ee4.png) no-repeat center center #b3916c;
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="cbl">
+			<ul>
+				<li>
+					<a href="#" target="_blank">
+						<span></span>
+					</a>
+				</li>
+				<li>
+					<a href="#" target="_blank">
+						<span></span>
+					</a>
+				</li>
+				<li>
+					<a href="#" target="_blank">
+						<span></span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span></span>
+					</a>
+					<img src="img/ee.jpg" />
+				</li>
+				<li class="fd">
+					<a href="javascript:;">
+						<span></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<script>
+			var  fd = document.getElementsByClassName('fd')[0];
+			var  cbl = document.getElementsByClassName('cbl')[0];
+//			window.onscroll = function(){   //滚动条事件
+//				topFn()
+//			}
+			
+			fd.onclick = function(){
+				goTop()
+			}
+			function topFn(){
+		var top  = oScrollTop()				
+		if (top>=400) {
+			cbl.style.display = 'block';
+		}else{
+			cbl.style.display = 'none';
+		}
+	}
+	function goTop(){
+		var top  = oScrollTop();
+		var timer  =  setInterval(function(){
+			top -= 100
+			if (top<=0) {
+				clearInterval(timer)				
+			}
+			document.documentElement.scrollTop = top
+			
+		},30)
+	}
+	function oScrollTop(){				
+		return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+	}	
+		</script>
+	</body>
+</html>
